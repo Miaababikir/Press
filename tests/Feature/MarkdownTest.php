@@ -3,9 +3,9 @@
 namespace miaababikir\Press\Tests;
 
 
-use PHPUnit\Framework\TestCase;
+use Orchestra\Testbench\TestCase;
 
-class InitialTest extends TestCase
+class MarkdownTest extends TestCase
 {
 
     /** @test */
