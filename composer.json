@@ -1,0 +1,25 @@
+{
+    "name": "miaababikir/press",
+    "description": "An elegant markdown-powered blog for the Laravel framework",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Miaababikir",
+            "email": "miaababikir@gmail.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "orchestra/testbench": "^3.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "miaababikir\\Press\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "miaababikir\\Press\\Tests\\": "tests/"
+        }
+    }
+}
