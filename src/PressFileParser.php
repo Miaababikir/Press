@@ -21,6 +21,7 @@ class PressFileParser
     {
         $this->filename = $filename;
         $this->splitFile();
+        $this->explodeData();
     }
 
     public function getData()
@@ -35,6 +36,15 @@ class PressFileParser
             File::get($this->filename),
             $this->data
         );
+
+    }
+
+    protected function explodeData()
+    {
+        foreach (explode("\n", trim($this->data[1])) as $fieldString) {
+            preg_match('/(.*):\s?(.*)/', $fieldString, $fieldArray);
+            $this->data[$fieldArray[1]] = $fieldArray[2];
+        }
     }
 
 }
